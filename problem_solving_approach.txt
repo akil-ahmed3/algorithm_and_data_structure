@@ -1,0 +1,33 @@
+ Understand the problem:
+    1. Restate the problem in your own words?
+    2. What are the inputs that go into the problem?
+    3. What are the outputs that should come from the solution to the problem?
+    4. Can the Outputs be determined from the inputs?
+    5. How should I label the important pieces of data that are part of the problem
+
+ Explore Concrete Examples
+    1. Start with simple examples.
+    2. Progress to more complex examples. 
+    3. Explore examples with empty inputs.
+    4. Explore inputs with invalid inputs.
+    
+ Break it down:
+    1. Write down the steps(commenting)
+    2. Start with the pseudo code.
+    3. Minimize the problem.
+    
+ solve/simplify (Solve the Problem, if you can't solve simpler problem):
+    1. Find the core difficulty in what you are trying to do.
+    2. Temporarily ignore that difficulty
+    3. Write a simplified solution.
+    4. Then incorporate that difficulty back in.
+    
+ Look back and refactor:
+    1. Can you chack the result?
+    2. Can you derive the result differently?
+    3. Can you understand it at a glance?
+    4. Can use the result or method for some other problem?
+    5. Can you improve the performance of your solution?4
+    6. Can you think of other ways to refactor?
+    7. How have other people solved this problem?
+ 
