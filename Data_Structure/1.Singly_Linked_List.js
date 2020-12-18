@@ -121,6 +121,7 @@ class SinglyLinkedList {
 
     let current = this.get(ind)
     this.get(ind - 1).next = this.get(ind + 1)
+    current.next = null
     this.length--
 
     return current

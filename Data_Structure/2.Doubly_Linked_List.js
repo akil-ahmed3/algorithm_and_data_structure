@@ -90,8 +90,6 @@ class DoublyLinkedList {
       return null
     }
     if (Math.floor(this.length / 2) > ind) {
-      console.log('From head')
-
       let count = 0
       val = this.head
       while (count !== ind) {
@@ -99,8 +97,6 @@ class DoublyLinkedList {
         count++
       }
     } else {
-      console.log('From tail')
-
       let count = this.length - 1
       val = this.tail
       while (count !== ind) {
@@ -120,6 +116,43 @@ class DoublyLinkedList {
       currentVal.val = val
       return true
     }
+  }
+
+  insert(ind, val) {
+    if (ind < 0 || ind > this.length) return false
+    if (ind === this.length) return this.push(val)
+    if (ind === 0) return this.unshift(val)
+
+    let previousNode = this.get(ind - 1)
+    let newNode = new Node(val)
+    let temp = previousNode.next
+
+    previousNode.next = newNode
+    newNode.prev = previousNode
+    newNode.next = temp
+    temp.prev = newNode
+
+    this.length++
+
+    return this
+  }
+
+  remove(ind) {
+    if (ind < 0 || ind >= this.length) return false
+    if (ind === this.length - 1) return this.pop()
+    if (ind === 0) return this.shift()
+
+    let removedNode = this.get(ind)
+    let beforeNode = removedNode.prev
+    let afterNode = removedNode.next
+
+    beforeNode.next = afterNode
+    afterNode.prev = beforeNode
+    removedNode.next = null
+    removedNode.prev = null
+    this.length--
+
+    return removedNode
   }
 }
 
